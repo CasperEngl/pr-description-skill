@@ -37,6 +37,17 @@ Do not draft from memory, issue text, or conversation context alone. Inspect the
    - Remove or soften claims inferred only from issue text, commit messages, or the conversation.
    - Avoid mentioning downstream work unless it is necessary to prevent a likely review misunderstanding.
 
+5. Confirm before updating:
+   - Present the final proposed PR description to the user.
+   - Ask the user to confirm that this exact description should replace the PR body.
+   - Do not update the PR description before confirmation.
+
+6. Update the PR description after confirmation:
+   - Use the repo's normal PR tooling when available, such as `gh pr edit --body-file`.
+   - Preserve the confirmed Markdown exactly unless the PR platform requires harmless transport formatting.
+   - If the PR target cannot be identified or no update tool is available, ask the user for the PR URL or where the description should be written.
+   - After updating, report the PR that was changed and summarize nothing unless the user asks.
+
 ## Default Shape
 
 Use this as a starting point, then remove sections that do not earn their keep:
@@ -110,3 +121,4 @@ Add these only when they are real:
 - Keep reviewer attention on what matters for this PR.
 - Make the description self-contained even when links are included.
 - Before finalizing, read the description as a list of factual claims and check each claim against the branch.
+- The final draft is a proposal until the user confirms it; once confirmed, update the PR body to match it.
