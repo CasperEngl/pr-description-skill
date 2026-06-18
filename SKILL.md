@@ -43,10 +43,10 @@ Do not draft from memory, issue text, or conversation context alone. Inspect the
    - Do not update the PR description before confirmation.
 
 6. Update the PR description after confirmation:
-   - Use the repo's normal PR tooling when available, such as `gh pr edit --body-file`.
+   - Update the PR body to match the confirmed description when the current environment supports it.
    - Preserve the confirmed Markdown exactly unless the PR platform requires harmless transport formatting.
-   - If the PR target cannot be identified or no update tool is available, ask the user for the PR URL or where the description should be written.
-   - After updating, report the PR that was changed and summarize nothing unless the user asks.
+   - If the PR target cannot be identified or the environment cannot update it, ask the user where the description should be written.
+   - After updating, report that the PR description was changed and summarize nothing unless the user asks.
 
 ## Default Shape
 
