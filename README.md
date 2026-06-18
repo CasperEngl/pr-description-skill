@@ -9,11 +9,13 @@ The skill emphasizes:
 - Avoiding duplicate sections and noisy file lists.
 - Using optional sections only when they help reviewers.
 
-Install by placing this directory in your Codex global skills directory, usually:
+Install with the skills.sh CLI:
 
 ```sh
-~/.agents/skills/pr-description
+npx skills add CasperEngl/pr-description-skill
 ```
+
+See the skills.sh installation docs: https://www.skills.sh/docs
 
 Invoke it with requests like:
 
